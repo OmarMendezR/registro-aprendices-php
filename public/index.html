@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- conexion con el archivo de estilos -->
+    <link rel="stylesheet" href="estilos.css">
+    <title>Registro de Aprendices</title>
+</head>
+<body>
+    <!-- Concexion del formulario con el archivo de JavaScript -->
+    <script src="../public/script.js"></script>
+    <header>
+        <h1>Registro de Aprendices</h1>
+    </header>
+    <div>
+        <article>
+            <p><strong>PROYECTO: </strong> Formulario de Registro, usando lenguajes: <strong>PHP, JavaScript</strong>. ademas de <strong>HTML</strong> y <strong>CSS</strong>. Herramienta para PHP usada: <strong>XAMPP</strong></p>
+        </article>
+        <main>
+            <!-- Formulario para registro de datos del aprendiz -->
+            <form action="../src/procesar.php" method="get" class="formulario">
+                <!-- campo de ingreso del nombre del aprendiz -->
+                <label for="nombre">Ingrese Nombre</label>
+                <input type="text" id="nombre" name="nombre" required pattern="[A-Za-z\s]+" title="Solo letras y espacios" placeholder="Ingresa tu nombre completo"><br>
+                <!-- campo de ingreso la edad del aprendiz -->
+                <label for="edad">Ingresa tu edad</label>
+                <input type="number" name="edad" id="edad" required placeholder="Ingresa o selecciona tu edad"><br>
+                <!-- campo de ingreso de la ciudad de residencia del aprendiz -->
+                <label for="ciudad">Ingrese su ciudad</label>
+                <input type="text" name="ciudad" id="ciudad" required pattern="[A-Za-z\s]+" title="Solo letras y espacios sin caracteres especiales (´.,-_:;!)" minlength="3" maxlength="100" placeholder="Ingresa tu ciudad de residencia"><br>
+                <!-- campo de seleccion del departamento de residencia del aprendiz -->
+                <label for="departamento">Selecciona el departamento</label>
+                <select name="departamento" id="departamento" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <optgroup label="Región Andina">
+                        <option value="Antioquia">Antioquia</option>
+                        <option value="Boyacá">Boyacá</option>
+                        <option value="Caldas">Caldas</option>
+                        <option value="Cundinamarca">Cundinamarca</option>
+                        <option value="Huila">Huila</option>
+                        <option value="Norte de Santander">Norte de Santander</option>
+                        <option value="Quindío">Quindío</option>
+                        <option value="Risaralda">Risaralda</option>
+                        <option value="Santander">Santander</option>
+                        <option value="Tolima">Tolima</option>
+                    </optgroup>
+
+                    <optgroup label="Región Caribe">
+                        <option value="Atlántico">Atlántico</option>
+                        <option value="Bolívar">Bolívar</option>
+                        <option value="Cesar">Cesar</option>
+                        <option value="Córdoba">Córdoba</option>
+                        <option value="La Guajira">La Guajira</option>
+                        <option value="Magdalena">Magdalena</option>
+                        <option value="Sucre">Sucre</option>
+                        <option value="San Andrés y Providencia">San Andrés y Providencia</option>
+                    </optgroup>
+
+                    <optgroup label="Región Pacífica">
+                        <option value="Chocó">Chocó</option>
+                        <option value="Nariño">Nariño</option>
+                        <option value="Valle del Cauca">Valle del Cauca</option>
+                        <option value="Cauca">Cauca</option>
+                    </optgroup>
+
+                    <optgroup label="Región Orinoquía">
+                        <option value="Arauca">Arauca</option>
+                        <option value="Casanare">Casanare</option>
+                        <option value="Meta">Meta</option>
+                        <option value="Vichada">Vichada</option>
+                    </optgroup>
+
+                    <optgroup label="Región Amazonía">
+                        <option value="Amazonas">Amazonas</option>
+                        <option value="Caquetá">Caquetá</option>
+                        <option value="Guainía">Guainía</option>
+                        <option value="Guaviare">Guaviare</option>
+                        <option value="Putumayo">Putumayo</option>
+                        <option value="Vaupés">Vaupés</option>
+                    </optgroup>
+                </select><br>
+                <!-- campo de seleccion del programa al que aspira el aprendiz -->
+                <label for="programa">Seleccione su programa</label>
+                <select name="programa" id="programa" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <optgroup label="carrerasTecnicas: ">
+                        <option value="TecnicoAgropecuario">Tecnico Agropecuario</option>
+                        <option value="TecnicoAmbiental">Tecnico Ambiental</option>
+                    </optgroup>
+                    <optgroup label="carrerasTecnologicas">
+                        <option value="TecnologoSistemas">Tecnologo Sistemas</option>
+                        <option value="TecnologoAmbiental">Tecnologo Ambiental</option>
+                    </optgroup>
+                </select><br>
+                <!-- Boton que activa el Script -->
+                <button type="button" onclick="mostrarResumen()">Ver Resumen</button>
+                <!-- Campo donde se mostrara el mensaje emitido por el Script -->
+                <div id="resumen"></div>
+                <!-- boton que envia el formulario al archivo .php -->
+                <button type="submit">Enviar</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>

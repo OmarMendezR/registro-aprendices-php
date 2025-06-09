@@ -1,0 +1,123 @@
+/* General */
+body {
+    background-color: #F9FAFB;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #111827;
+}
+
+/* Header */
+header {
+    background-color: #1E3A8A;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Formulario */
+form {
+    background-color: #ffffff;
+    max-width: 650px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    border: 1px solid #D1D5DB;
+}
+
+/* encabezados */
+
+label {
+    color: #1E3A8A;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* campos de entrada de datos */
+
+input[type="text"], input[type="number"], select {
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    padding: 0.6rem;
+    width: 100%;
+    margin-top: 0.4rem;
+    font-size: 1rem;
+    background-color: #F9FAFB;
+    color: #111827;
+}
+
+/* estilo al interactuar con los campos de entrada */
+
+input:focus, select:focus {
+    border-color: #3B82F6;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* Botón */
+button {
+    margin-top: 1.5rem;
+    padding: 0.75rem;
+    background-color: #1E3A8A;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* estilos del boton al interactuar con el */
+
+button:hover,
+button:focus {
+    background-color: #3B82F6;
+    outline: none;
+}
+
+/* Estilo para mensaje de respuesta PHP */
+.respuesta {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.06);
+    line-height: 1.6;
+    border-left: 6px solid #3B82F6;
+    color: #1E3A8A;
+}
+
+.respuesta h2 {
+    margin-bottom: 15px;
+    color: #1E3A8A;
+}
+
+.respuesta p {
+    color: #374151;
+}
+
+.respuesta strong {
+    color: #1E40AF;
+}
+
+.respuesta em {
+    color: #6B7280;
+}
+
+/* Colores para el estado final del proceso exitoso */
+.respuesta.exito {
+    border-left-color: #10B981;
+    background-color: #ECFDF5;
+    color: #065F46;
+}
