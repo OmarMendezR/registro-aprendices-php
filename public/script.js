@@ -9,7 +9,8 @@ function mostrarResumen() {
 
     // mostrar mensaje en el formulario de resumen de datos a enviar
 
-    document.getElementById("resumen").innerHTML = `
+    document.getElementById("resumen").innerHTML = /*tabla donde se muestran los datos insertados */ 
+        `
         <p><strong>Revisa tus datos:</strong></p>
         <ul>
             <li><strong>Nombre</strong>: ${nombre}</li>
